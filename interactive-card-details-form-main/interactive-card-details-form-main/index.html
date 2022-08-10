@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+    <div>
+      <div class="img_card">
+        <img src="./images/card-logo.svg" alt="favi">
+        <h3 class="text_number" id="number">0000 0000 0000 0000</h3>
+        <div class="flex_size">
+          <h4 class="tex_h4" id="name"></h4>
+          <p class="p_left" id="dias">
+          
+          </p>
+          <p>
+            /
+          </p>
+          <p id="mess">
+            
+          </p>          
+        </div>
+
+        <div class="padding">
+         <h2 id="h2_input"></h2>
+        </div>
+      </div>
+      <div class="flex_input">
+        <img src="./images/bg-main-desktop.png" class="img_flex--main" alt="bg-desktop">
+
+
+        <div class="block">
+          <h3 class="name_h3">Your name</h3>
+          <input type="text" id="cardName" placeholder="Ingrese su nombre" required>
+          <h3 class="name_h3">Card Number</h3>
+          <input type="text" id="numeroTarjeta" placeholder="Ingrese su numero de tarjeta">
+          <h3 class="name_h3">EXP. DATE (MM/YY)</h3>
+          <div class="flex">
+            <input type="text" id="dia" required placeholder="date">
+            <input type="text" id="mes" required placeholder="date">
+            <div>
+              <input type="text" id="cvc" required placeholder="CVC">
+            </div>
+          </div>
+          <div class="boton_input">
+            <input type="submit" value="Confirmar">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+<script>
+  var input = document.getElementById('numeroTarjeta');
+  var numero = document.getElementById('number');
+
+  var inputName = document.getElementById('cardName');
+  var nombre = document.getElementById('name');
+
+  var fechaDiaInput = document.getElementById('dia');
+  var fechaMesinput = document.getElementById('mes');
+  
+  var inputDia = document.getElementById('dias');
+  var inputMes = document.getElementById('mess');
+
+  var inputCVC = document.getElementById('cvc');
+  var textCVC = document.getElementById('h2_input');
+
+  inputName.addEventListener('keyup', function () {
+    nombre.innerHTML = inputName.value;
+  })
+
+
+
+  input.addEventListener('keyup', function () {
+    numero.innerHTML = input.value;
+  })
+
+
+  fechaDiaInput.addEventListener('keyup', function (){
+
+    inputDia.innerHTML = fechaDiaInput.value;
+
+  })
+  fechaMesinput.addEventListener('keyup', function (){
+
+inputMes.innerHTML = fechaMesinput.value;
+
+})
+
+
+  inputCVC.addEventListener('keyup', function(){
+
+  
+    
+
+    textCVC.innerHTML = inputCVC.value;
+
+
+  })
+
+
+
+
+</script>
+
+</html>
